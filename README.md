@@ -5,35 +5,29 @@ A full-stack web application that generates **FMCSA-compliant Driver's Daily Log
 **Live Demo:** [darshan439.github.io/Trip-Planner](https://darshan439.github.io/Trip-Planner/)  
 **Backend API:** [trip-planner-ormo.onrender.com](https://trip-planner-ormo.onrender.com)
 
----
 
-## 📸 Preview
 
-![Driver Daily Log](frontend/preview.png)
+##  Features
 
----
-
-## ✨ Features
-
-- 🗺️ **Route Planning** — Enter start and end locations to calculate distance and estimated drive time
-- ⏱️ **HOS Engine** — Automatically simulates trip plan following FMCSA Hours of Service regulations:
+-  **Route Planning** — Enter start and end locations to calculate distance and estimated drive time
+-  **HOS Engine** — Automatically simulates trip plan following FMCSA Hours of Service regulations:
   - 11-hour driving limit
   - 14-hour duty window
   - 30-minute rest break after 8 hours of driving
   - 10-hour off-duty rest period
   - 60/70-hour weekly limit
-- 📋 **FMCSA ELD Grid** — Renders a proper Driver's Daily Log graph with:
+-  **FMCSA ELD Grid** — Renders a proper Driver's Daily Log graph with:
   - Off Duty, Sleeper Berth, Driving, On Duty rows
   - Hour labels (Midnight to Midnight)
   - 15-minute tick marks
   - Total hours per row
-- 📝 **Remarks Section** — Auto-generates duty status change log
-- 📅 **Multi-Day Support** — Navigate between days for long trips
-- 📱 **Responsive** — Works on desktop and mobile
+-  **Remarks Section** — Auto-generates duty status change log
+-  **Multi-Day Support** — Navigate between days for long trips
+-  **Responsive** — Works on desktop and mobile
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -45,7 +39,7 @@ A full-stack web application that generates **FMCSA-compliant Driver's Daily Log
 
 ---
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 Trip-Planner/
@@ -72,7 +66,7 @@ Trip-Planner/
 
 ---
 
-## 🚀 Getting Started (Local Development)
+##  Getting Started (Local Development)
 
 ### Prerequisites
 - Python 3.10+
@@ -155,17 +149,17 @@ Generate a trip plan with HOS-compliant daily logs.
 
 ---
 
-## 📜 FMCSA HOS Rules Implemented
+##  FMCSA HOS Rules Implemented
 
-- ✅ **11-Hour Driving Limit** — Max 11 hours driving after 10 hours off
-- ✅ **14-Hour Window** — No driving after 14th consecutive hour on duty
-- ✅ **30-Minute Break** — Required after 8 cumulative hours of driving
-- ✅ **10-Hour Off Duty** — Required rest between shifts
-- ✅ **Automatic Day Splitting** — Multi-day trips handled automatically
+-  **11-Hour Driving Limit** — Max 11 hours driving after 10 hours off
+-  **14-Hour Window** — No driving after 14th consecutive hour on duty
+-  **30-Minute Break** — Required after 8 cumulative hours of driving
+-  **10-Hour Off Duty** — Required rest between shifts
+-  **Automatic Day Splitting** — Multi-day trips handled automatically
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 ### Frontend — GitHub Pages
 Deployed automatically from the `main` branch root folder.
