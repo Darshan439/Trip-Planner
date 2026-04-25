@@ -1,0 +1,272 @@
+/* ── RESET & BASE ──────────────────────────────────────────────── */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    background: #f0f0f0;
+    padding: 20px;
+    color: #000;
+}
+
+/* ── TOP CONTROLS (Generate form) ─────────────────────────────── */
+.top-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.top-controls input {
+    padding: 7px 10px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 13px;
+    width: 200px;
+}
+
+.top-controls button {
+    padding: 7px 18px;
+    background: #1a3fa3;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.top-controls button:hover {
+    background: #142e80;
+}
+
+/* ── MAIN LOG CONTAINER ────────────────────────────────────────── */
+.log-container {
+    background: #fff;
+    border: 2px solid #000;
+    padding: 12px 14px;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+/* ── LOG TITLE BAR ─────────────────────────────────────────────── */
+.log-title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.log-title {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+}
+
+.log-subtitle {
+    font-size: 12px;
+    color: #444;
+}
+
+.log-title-right {
+    font-size: 10px;
+    text-align: right;
+    color: #333;
+}
+
+/* ── HEADER ROWS (date, miles, truck, carrier, etc.) ───────────── */
+.header-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+    align-items: flex-end;
+}
+
+.header-cell {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.header-cell.wide {
+    flex: 2;
+}
+
+.header-cell label {
+    font-size: 10px;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.header-cell input {
+    padding: 4px 6px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 12px;
+    width: 100%;
+    background: transparent;
+    outline: none;
+}
+
+.header-cell input:focus {
+    border-bottom: 2px solid #1a3fa3;
+}
+
+/* ── DAY NAVIGATION ────────────────────────────────────────────── */
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 8px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0 6px;
+}
+
+.nav-bar button {
+    padding: 5px 14px;
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.nav-bar button:hover {
+    background: #ddd;
+}
+
+#dayLabel {
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* ── CANVAS WRAPPER ────────────────────────────────────────────── */
+.canvas-wrapper {
+    overflow-x: auto;
+    margin: 4px 0;
+}
+
+#eldCanvas {
+    display: block;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+/* ── TOTALS BAR (text summary below canvas) ────────────────────── */
+.totals-bar {
+    display: flex;
+    gap: 24px;
+    padding: 6px 4px;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.totals-bar span strong {
+    margin-left: 4px;
+}
+
+/* ── REMARKS ───────────────────────────────────────────────────── */
+.remarks-section {
+    margin-bottom: 10px;
+}
+
+.remarks-section h3 {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+}
+
+#remarksBox {
+    width: 100%;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    padding: 6px 8px;
+    border: 1px solid #aaa;
+    resize: vertical;
+    background: #fafafa;
+    line-height: 1.6;
+}
+
+/* ── SHIPPING SECTION ──────────────────────────────────────────── */
+.shipping-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-top: 6px;
+    border-top: 1px solid #ccc;
+}
+
+.shipping-section label {
+    font-size: 11px;
+    white-space: nowrap;
+    color: #444;
+}
+
+.shipping-section input {
+    flex: 1;
+    padding: 4px 6px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 12px;
+    background: transparent;
+    outline: none;
+}
+
+/* ── SIGNATURE SECTION ─────────────────────────────────────────── */
+.signature-section {
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+}
+
+.sig-cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sig-cell input {
+    padding: 4px 6px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 12px;
+    background: transparent;
+    outline: none;
+    margin-bottom: 3px;
+}
+
+.sig-cell label {
+    font-size: 10px;
+    color: #555;
+    font-style: italic;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+    .header-row {
+        flex-direction: column;
+    }
+    .header-cell.wide {
+        flex: 1;
+    }
+    .signature-section {
+        flex-direction: column;
+    }
+}
