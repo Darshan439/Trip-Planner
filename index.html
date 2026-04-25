@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Driver Daily Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP CONTROLS -->
+<div class="top-controls">
+    <input id="from" placeholder="Start Location">
+    <input id="to" placeholder="End Location">
+    <button id="generateBtn">Generate</button>
+</div>
+
+<!-- MAIN LOG CONTAINER -->
+<div class="log-container">
+
+    <!-- LOG TITLE -->
+    <div class="log-title-bar">
+        <div class="log-title-left">
+            <span class="log-title">Driver's Daily Log</span>
+            <span class="log-subtitle">(24 hours)</span>
+        </div>
+        <div class="log-title-right">
+            <span>Original - File at home terminal.</span><br>
+            <span>Duplicate - Driver retains in his/her possession for 8 days.</span>
+        </div>
+    </div>
+
+    <!-- DATE / MILES ROW -->
+    <div class="header-row">
+        <div class="header-cell">
+            <input type="date" id="logDate">
+            <label>(month/day/year)</label>
+        </div>
+        <div class="header-cell">
+            <input type="text" id="totalMiles" placeholder="Total Miles Driving Today">
+        </div>
+        <div class="header-cell wide">
+            <input type="text" id="truckNumber" placeholder="Truck/Tractor and Trailer Numbers or License Plates">
+        </div>
+    </div>
+
+    <!-- FROM / TO ROW -->
+    <div class="header-row">
+        <div class="header-cell">
+            <label>From:</label>
+            <input type="text" id="fromDisplay" placeholder="Start Location">
+        </div>
+        <div class="header-cell">
+            <label>To:</label>
+            <input type="text" id="toDisplay" placeholder="End Location">
+        </div>
+        <div class="header-cell wide">
+            <input type="text" id="carrierName" placeholder="Name of Carrier or Carriers">
+        </div>
+    </div>
+
+    <!-- OFFICE ADDRESS ROW -->
+    <div class="header-row">
+        <div class="header-cell wide">
+            <input type="text" id="officeAddress" placeholder="Main Office Address">
+        </div>
+        <div class="header-cell wide">
+            <input type="text" id="homeTerminal" placeholder="Home Terminal Address">
+        </div>
+    </div>
+
+    <!-- DAY NAV -->
+    <div class="nav-bar">
+        <button onclick="prevDay()">&#9664; Prev</button>
+        <span id="dayLabel">Day 1</span>
+        <button onclick="nextDay()">Next &#9654;</button>
+    </div>
+
+    <!-- ELD CANVAS (labels, grid, totals all drawn inside canvas) -->
+    <div class="canvas-wrapper">
+        <canvas id="eldCanvas" width="1000" height="280"></canvas>
+    </div>
+
+    <!-- TOTALS BELOW CANVAS (text summary) -->
+    <div class="totals-bar">
+        <span>Off: <strong id="offTotal">0.00</strong></span>
+        <span>Sleep: <strong id="sleepTotal">0.00</strong></span>
+        <span>Drive: <strong id="driveTotal">0.00</strong></span>
+        <span>On: <strong id="onTotal">0.00</strong></span>
+    </div>
+
+    <!-- REMARKS -->
+    <div class="remarks-section">
+        <h3>Remarks</h3>
+        <textarea id="remarksBox" rows="6" placeholder="Duty status changes will appear here..."></textarea>
+    </div>
+
+    <!-- SHIPPING DOCS -->
+    <div class="shipping-section">
+        <label>Shipping Documents / Pro or Manifest No.:</label>
+        <input type="text" id="shippingDoc" placeholder="Shipping document number or shipper name & commodity">
+    </div>
+
+    <!-- DRIVER SIGNATURE -->
+    <div class="signature-section">
+        <div class="sig-cell">
+            <input type="text" id="driverSig" placeholder="Driver's Signature in Full">
+            <label>I certify these entries are true and correct.</label>
+        </div>
+        <div class="sig-cell">
+            <input type="text" id="coDriver" placeholder="Name of Co-Driver (if any)">
+        </div>
+    </div>
+
+</div><!-- end .log-container -->
+
+<script src="script.js"></script>
+</body>
+</html>
