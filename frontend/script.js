@@ -13,7 +13,7 @@ async function generatePlan() {
     if (toDisplay)   toDisplay.value   = to;
 
     try {
-        const res = await fetch("https://trip-planner-ormo.onrender.com", {
+        const res = await fetch("https://trip-planner-ormo.onrender.com/api/plan/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ start: from, end: to })
